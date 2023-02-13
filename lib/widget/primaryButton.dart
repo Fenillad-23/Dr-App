@@ -10,7 +10,10 @@ Container primaryButton(double width, double height, Color? backgroundColor,
       width: width,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(radius ?? 0),
-          gradient: LinearGradient(colors: AppColors.darkGradientButtonColor)),
+          gradient: LinearGradient(
+              colors: AppColors.darkGradientButtonColor,
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter)),
       child: ElevatedButton(
           style: ElevatedButton.styleFrom(
               backgroundColor: backgroundColor,

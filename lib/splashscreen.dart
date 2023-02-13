@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:demo/authentication/intropage.dart';
+import 'package:demo/screens/authentication/intropage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

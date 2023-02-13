@@ -1,50 +1,36 @@
-import 'package:demo/authentication/signin.dart';
+import 'package:demo/screens/authentication/forgot%20password/forgotpassword.dart';
+import 'package:demo/screens/authentication/signup.dart';
 import 'package:demo/color/AppColor.dart';
-import 'package:demo/controller/signupController.dart';
+import 'package:demo/controller/signinController.dart';
 import 'package:demo/widget/EditText.dart';
 import 'package:demo/widget/TextView.dart';
 import 'package:demo/widget/primaryButton.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../widget/appBar.dart';
-import '../widget/roundContainer.dart';
+import '../../widget/appBar.dart';
+import '../../widget/roundContainer.dart';
+import '../dashboard/homepage.dart';
 
-class SignUp extends StatefulWidget {
-  const SignUp({super.key});
+class SignIn extends StatefulWidget {
+  const SignIn({super.key});
 
   @override
-  State<SignUp> createState() => _SignUpState();
+  State<SignIn> createState() => _SignInState();
 }
 
-class _SignUpState extends State<SignUp> {
-  signupcontroller controller = Get.put(signupcontroller());
+class _SignInState extends State<SignIn> {
+  signincontroller controller = Get.put(signincontroller());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         resizeToAvoidBottomInset: true,
         backgroundColor: AppColors.appBackground,
         appBar: Appbar(
-          'Sign Up',
+          'Login',
         ),
         body: SingleChildScrollView(
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Padding(
-                padding: const EdgeInsets.only(left: 24.0, top: 24),
-                child: TextView('Name',
-                    fontWeight: FontWeight.w500,
-                    fontSize: 16,
-                    textColor: AppColors.deepdarkTextColor)),
-            Padding(
-                padding:
-                    const EdgeInsets.only(left: 24.0, top: 12, right: 24.0),
-                child: EditText(
-                  controller: controller.nameController,
-                  hint: 'Enter your Name',
-                  border: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.blue, width: 1.0)),
-                  borderRadius: 8,
-                )),
             Padding(
                 padding: const EdgeInsets.only(left: 24.0, top: 24),
                 child: TextView('Email',
@@ -93,56 +79,44 @@ class _SignUpState extends State<SignUp> {
                                     !controller.obscure.value;
                               })),
                     ))),
-            Padding(
-              padding: const EdgeInsets.only(left: 16.0, top: 16, right: 95),
-              child: Row(
-                children: [
-                  Checkbox(
-                    shape: CircleBorder(),
-                    value: controller.termsAndCondition.value,
-                    onChanged: (value) {
-                      controller.termsAndCondition.value = value!;
-                      setState(() {});
-                    },
-                  ),
-                  Expanded(
-                    child: TextView(
-                      'I agree to the doctors Terms of Service and Privacy Policy',
-                      textColor: AppColors.deepdarkTextColor,
-                      maxLines: 2,
-                      textAlign: TextAlign.justify,
-                    ),
-                  )
-                ],
-              ),
-            ),
-            Padding(
-                padding: const EdgeInsets.only(top: 113, left: 130, right: 129),
-                child: primaryButton(
-                    155,
-                    44,
-                    Theme.of(context).primaryColor.withOpacity(.8),
-                    () {},
-                    'SignUp',
-                    AppColors.lightTextColor,
-                    22)),
             GestureDetector(
               onTap: () {
-                Get.to(SignIn());
+                Get.to(ForgotPassword());
+              },
+              child: Padding(
+                  padding: const EdgeInsets.only(right: 24.0, top: 12),
+                  child:
+                      Row(mainAxisAlignment: MainAxisAlignment.end, children: [
+                    TextView('Forgot Password',
+                        fontWeight: FontWeight.w500,
+                        fontSize: 14,
+                        textColor: AppColors.deepdarkTextColor)
+                  ])),
+            ),
+            Padding(
+                padding: const EdgeInsets.only(top: 240, left: 130, right: 129),
+                child: primaryButton(
+                    155, 44, Theme.of(context).primaryColor.withOpacity(.8),
+                    () {
+                  Get.to(HomePage());
+                }, 'SignIn', AppColors.lightTextColor, 22)),
+            GestureDetector(
+              onTap: () {
+                Get.off(SignUp());
               },
               child: Padding(
                   padding: const EdgeInsets.only(top: 16.0),
                   child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        TextView('Already have an account?',
+                        TextView('Don\'t have an account?',
                             fontWeight: FontWeight.w400,
                             fontSize: 14,
                             textColor: AppColors.deepdarkTextColor),
                         TextView('SignIn',
-                            fontWeight: FontWeight.w700,
+                            fontWeight: FontWeight.w500,
                             fontSize: 14,
-                            textColor: AppColors.deepdarkTextColor)
+                            textColor: AppColors.darkTextColor)
                       ])),
             ),
             Padding(
@@ -156,7 +130,7 @@ class _SignUpState extends State<SignUp> {
             Padding(
               padding: const EdgeInsets.only(top: 32),
               child: Center(
-                  child: TextView('Signup with',
+                  child: TextView('Signin with',
                       fontWeight: FontWeight.w400,
                       fontSize: 14,
                       textColor: AppColors.deepdarkTextColor)),
@@ -169,13 +143,15 @@ class _SignUpState extends State<SignUp> {
                       child: RoundContainer(
                           64, 64, 'assets/images/google_logo.png', () {})),
                   Padding(
-                      padding: const EdgeInsets.only(left: 32.0),
-                      child: RoundContainer(
-                          64, 64, 'assets/images/facebook_logo.png', () {})),
+                    padding: const EdgeInsets.only(left: 32.0),
+                    child: RoundContainer(
+                        64, 64, 'assets/images/facebook_logo.png', () {}),
+                  ),
                   Padding(
-                      padding: const EdgeInsets.only(left: 32.0),
-                      child: RoundContainer(
-                          64, 64, 'assets/images/apple_logo.png', () {}))
+                    padding: const EdgeInsets.only(left: 32.0),
+                    child: RoundContainer(
+                        64, 64, 'assets/images/apple_logo.png', () {}),
+                  )
                 ]))
           ]),
         ));

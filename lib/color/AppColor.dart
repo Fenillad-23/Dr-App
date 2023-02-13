@@ -12,8 +12,8 @@ class AppColors {
   static Color deepdarkTextColor = Colors.black;
   static Color shadowColor = Colors.grey;
   static List<Color> darkGradientButtonColor = [
-    Color(0x0A8FF4),
-    Color(0x026DC1),
+    Color.fromARGB(255, 4, 173, 251),
+    Color.fromARGB(255, 1, 51, 79)
   ];
 
   static Color lightButtonBorder = Colors.blue;

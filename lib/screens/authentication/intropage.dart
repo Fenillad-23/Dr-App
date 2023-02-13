@@ -2,8 +2,8 @@ import 'package:demo/color/AppColor.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../widget/TextView.dart';
-import '../widget/primaryButton.dart';
+import '../../widget/TextView.dart';
+import '../../widget/primaryButton.dart';
 import 'signin.dart';
 import 'signup.dart';
 
@@ -57,16 +57,16 @@ class _IntroState extends State<Intro> {
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 16, left: 84, right: 84),
-                child: TextView(
-                  textAlign: TextAlign.center,
-                  'Login or SignUp to get healthy and Stay fittt!',
-                  fontSize: 18,
-                  textColor: AppColors.lightTextColor,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
+              // Padding(
+              //   padding: const EdgeInsets.only(top: 16, left: 84, right: 84),
+              //   child: TextView(
+              //     textAlign: TextAlign.center,
+              //     'Login or SignUp to get healthy and Stay fittt!',
+              //     fontSize: 18,
+              //     textColor: AppColors.deepdarkTextColor,
+              //     fontWeight: FontWeight.w600,
+              //   ),
+              // ),
               Padding(
                 padding: const EdgeInsets.only(top: 289, left: 130, right: 129),
                 child: primaryButton(
