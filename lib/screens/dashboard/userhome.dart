@@ -1,7 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:demo/color/AppColor.dart';
 import 'package:demo/controller/homepageController.dart';
-import 'package:demo/screens/dashboard/topdoctors.dart';
+import 'package:demo/screens/dashboard/doctor/topdoctors.dart';
 import 'package:demo/widget/TextView.dart';
 import 'package:demo/widget/customTile.dart';
 import 'package:demo/widget/primaryButton.dart';
@@ -9,6 +9,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../widget/roundContainer.dart';
+import 'doctor/bookappointment.dart';
+import 'doctor/searchdoctor.dart';
 
 class UserHome extends StatefulWidget {
   const UserHome({super.key});
@@ -19,7 +21,7 @@ class UserHome extends StatefulWidget {
 
 class _UserHomeState extends State<UserHome> {
   homepageController controller = Get.put(homepageController());
-
+  ScrollController _controller = ScrollController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,33 +34,36 @@ class _UserHomeState extends State<UserHome> {
           children: [
             Padding(
               padding: const EdgeInsets.only(top: 53.0),
-              child: Expanded(
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 24.0),
-                      child: TextView(
-                        'Find your health solution!',
-                        fontStyle: FontStyle.italic,
-                        fontSize: 20,
-                        wordSpacing: 1,
-                        fontWeight: FontWeight.w500,
-                      ),
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 24.0),
+                    child: TextView(
+                      'Find your health solution!',
+                      fontStyle: FontStyle.italic,
+                      fontSize: 20,
+                      wordSpacing: 1,
+                      fontWeight: FontWeight.w500,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        left: 71.03,
-                      ),
-                      child: Icon(
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      left: 60.03,
+                    ),
+                    child: IconButton(
+                      icon: Icon(
                         Icons.search,
                       ),
+                      onPressed: () {
+                        Get.to(SearchDoctor());
+                      },
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 20, right: 25),
-                      child: Icon(Icons.notifications_outlined),
-                    )
-                  ],
-                ),
+                  ),
+                  IconButton(
+                    icon: Icon(Icons.notifications_outlined),
+                    onPressed: () {},
+                  )
+                ],
               ),
             ),
             Padding(
@@ -150,7 +155,7 @@ class _UserHomeState extends State<UserHome> {
                       padding: const EdgeInsets.only(right: 24),
                       child: GestureDetector(
                         onTap: () {
-                          Get.to(TopDoctors());
+                          Get.to(() => TopDoctors());
                         },
                         child: TextView(
                           'View All',
@@ -167,13 +172,9 @@ class _UserHomeState extends State<UserHome> {
             DoctorListView(
               controller.doctorData,
               primaryButton(
-                  100,
-                  28,
-                  Theme.of(context).primaryColor.withOpacity(.8),
-                  () {},
-                  'Appointment',
-                  AppColors.lightTextColor,
-                  25),
+                  113, 28, Theme.of(context).primaryColor.withOpacity(.8), () {
+                Get.to(BookAppointment());
+              }, 'Appointment', AppColors.lightTextColor, 25),
               3,
             ),
             Padding(
@@ -192,39 +193,74 @@ class _UserHomeState extends State<UserHome> {
               ),
             ),
             Padding(
-                padding: EdgeInsets.only(left: 24, top: 16),
+              padding: const EdgeInsets.only(top: 16.0, left: 24),
+              child: SizedBox(
+                width: double.infinity,
+                height: 100,
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    CircleAvatar(
-                      radius: 30,
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(40),
-                        child: Image.asset(
-                          controller.doctorData[0]['img'],
+                    ListView(
+                      controller: _controller,
+                      scrollDirection: Axis.horizontal,
+                      shrinkWrap: true,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            children: [
+                              CircleAvatar(
+                                radius: 30,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(40),
+                                  child: Image.asset(
+                                    controller.doctorData[0]['img'],
+                                  ),
+                                ),
+                              ),
+                              Text(controller.doctorData[0]['name'])
+                            ],
+                          ),
                         ),
-                      ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            children: [
+                              CircleAvatar(
+                                radius: 30,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(40),
+                                  child: Image.asset(
+                                    controller.doctorData[1]['img'],
+                                  ),
+                                ),
+                              ),
+                              Text(controller.doctorData[1]['name'])
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            children: [
+                              CircleAvatar(
+                                radius: 30,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(40),
+                                  child: Image.asset(
+                                    controller.doctorData[2]['img'],
+                                  ),
+                                ),
+                              ),
+                              Text(controller.doctorData[2]['name'])
+                            ],
+                          ),
+                        )
+                      ],
                     ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    CircleAvatar(
-                      radius: 30,
-                      child: ClipRRect(
-                          borderRadius: BorderRadius.circular(40),
-                          child: Image.asset(controller.doctorData[1]['img'])),
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    CircleAvatar(
-                      radius: 30,
-                      child: ClipRRect(
-                          borderRadius: BorderRadius.circular(40),
-                          child: Image.asset(controller.doctorData[2]['img'])),
-                    )
                   ],
-                ))
+                ),
+              ),
+            )
           ],
         ),
       ),

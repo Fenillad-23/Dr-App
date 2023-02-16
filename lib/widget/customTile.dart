@@ -1,6 +1,8 @@
 import 'package:demo/color/AppColor.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
+import '../screens/dashboard/doctor/doctorInfo.dart';
 import 'TextView.dart';
 
 ScrollController _controller = new ScrollController();
@@ -11,54 +13,62 @@ ListView DoctorListView(List doctorData, Widget elevatedButton, int itemCount) {
     shrinkWrap: true,
     // scrollDirection: Axis.vertical,
     itemBuilder: (context, index) {
-      return SizedBox(
-        height: 100,
-        width: 366,
-        child: Padding(
-            padding: EdgeInsets.only(top: 16.0, right: 24.0, left: 24.0),
+      return Padding(
+        padding: const EdgeInsets.only(top: 16.0, left: 20, right: 20),
+        child: GestureDetector(
+          onTap: () {
+            Get.to(DoctorInfo(), arguments: [doctorData[index]]);
+          },
+          child: SizedBox(
+            height: 98,
+            width: 370,
             child: Container(
-              height: 100,
-              width: 366,
+              height: 98,
+              width: 370,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 color: Colors.white,
               ),
               child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 16.0, top: 16.0),
+                  Container(
+                    // color: Colors.red,
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        CircleAvatar(
-                            backgroundImage:
-                                AssetImage(doctorData[index]['img']))
+                        Padding(
+                          padding: const EdgeInsets.only(left: 16.0, right: 16),
+                          child: CircleAvatar(
+                            radius: 25,
+                            child: ClipRRect(
+                                borderRadius: BorderRadius.circular(40),
+                                child: Image.asset(doctorData[index]['img'])),
+                          ),
+                        )
                       ],
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 15.0, top: 16.0),
+                  Container(
+                    width: 170,
+                    // color: Colors.yellow,
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.only(top: 2.0),
-                          child: TextView(
-                            doctorData[index]['name'],
-                            fontSize: 18,
-                          ),
+                        TextView(
+                          doctorData[index]['name'],
+                          fontSize: 18,
                         ),
                         Padding(
                           padding: const EdgeInsets.only(top: 6.0),
                           child: TextView(
                             doctorData[index]['category'],
-                            // fontSize: 14,
                             textColor: AppColors.shadowColor,
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(top: 7.0),
+                          padding: const EdgeInsets.only(top: 4.0),
                           child: Row(
                             children: [
                               Icon(
@@ -76,44 +86,45 @@ ListView DoctorListView(List doctorData, Widget elevatedButton, int itemCount) {
                       ],
                     ),
                   ),
-                  Expanded(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(right: 8.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              Icon(
-                                Icons.star,
-                                color: Colors.yellowAccent.shade700,
-                              ),
-                              TextView(doctorData[index]['rating'])
-                            ],
+                  Container(
+                      // color: Colors.blue,
+                      child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Icon(
+                              Icons.star,
+                              color: Colors.yellow.shade700,
+                            ),
                           ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: TextView(
+                              doctorData[index]['rating'],
+                              fontSize: 18,
+                            ),
+                          )
+                        ],
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 16.0),
+                        child: Row(
+                          children: [
+                            elevatedButton,
+                          ],
                         ),
-                        SizedBox(
-                          height: 8,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              elevatedButton,
-                            ],
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    height: 20,
-                  )
+                      )
+                    ],
+                  ))
                 ],
               ),
-            )),
+            ),
+          ),
+        ),
       );
     },
   );

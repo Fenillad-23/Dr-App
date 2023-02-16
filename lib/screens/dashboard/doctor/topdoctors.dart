@@ -5,7 +5,7 @@ import 'package:demo/widget/primaryButton.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../widget/customTile.dart';
+import '../../../widget/customTile.dart';
 
 class TopDoctors extends StatefulWidget {
   const TopDoctors({super.key});
@@ -28,7 +28,7 @@ class _TopDoctorsState extends State<TopDoctors> {
             DoctorListView(
               controller.doctorData,
               primaryButton(
-                  100,
+                  113,
                   28,
                   Theme.of(context).primaryColor.withOpacity(.8),
                   () {},

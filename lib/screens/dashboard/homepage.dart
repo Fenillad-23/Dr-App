@@ -1,6 +1,6 @@
 import 'package:demo/screens/authentication/forgot%20password/resetPassword.dart';
 import 'package:demo/screens/authentication/signup.dart';
-import 'package:demo/screens/dashboard/usehome.dart';
+import 'package:demo/screens/dashboard/userhome.dart';
 import 'package:flutter/material.dart';
 
 import '../../color/AppColor.dart';

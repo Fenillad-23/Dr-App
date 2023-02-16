@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import '../color/AppColor.dart';
 import 'TextView.dart';
 
-AppBar Appbar(String title, [List<Widget>? actions]) {
+AppBar Appbar(String? title, [List<Widget>? actions]) {
   return AppBar(
     backgroundColor: AppColors.appBarColor,
     elevation: 0,
@@ -19,7 +19,7 @@ AppBar Appbar(String title, [List<Widget>? actions]) {
       },
     ),
     title: Padding(
-      padding: const EdgeInsets.only(left: 100.0),
+      padding: EdgeInsets.only(left: 100.0),
       child: TextView(
         '$title',
         textColor: AppColors.deepdarkTextColor,
