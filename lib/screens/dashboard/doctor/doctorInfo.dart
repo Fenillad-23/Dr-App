@@ -18,8 +18,8 @@ class DoctorInfo extends StatefulWidget {
 
 class _DoctorInfoState extends State<DoctorInfo> {
   homepageController controller = Get.put(homepageController());
-  var index = Get.arguments;
-  late int i;
+  var index = Get.arguments[0];
+
   @override
   void initState() {
     super.initState();
@@ -30,6 +30,7 @@ class _DoctorInfoState extends State<DoctorInfo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       backgroundColor: AppColors.appBackground,
       appBar: Appbar('Doctor Details', [
         Padding(
@@ -63,7 +64,7 @@ class _DoctorInfoState extends State<DoctorInfo> {
                                 children: [
                                   ClipRRect(
                                     borderRadius: BorderRadius.circular(10),
-                                    child: Image.asset(index[0]['img'],
+                                    child: Image.asset(index['img'],
                                         height: 102,
                                         width: 135,
                                         fit: BoxFit.fitWidth),
@@ -77,14 +78,14 @@ class _DoctorInfoState extends State<DoctorInfo> {
                                           CrossAxisAlignment.start,
                                       children: [
                                         TextView(
-                                          index[0]['name'],
+                                          index['name'],
                                           fontSize: 18,
                                         ),
                                         Padding(
                                           padding:
                                               const EdgeInsets.only(top: 6.0),
                                           child: TextView(
-                                            index[0]['category'],
+                                            index['category'],
                                             textColor: AppColors.shadowColor,
                                           ),
                                         ),
@@ -102,7 +103,7 @@ class _DoctorInfoState extends State<DoctorInfo> {
                                                       const EdgeInsets.only(
                                                           left: 8.0),
                                                   child: TextView(
-                                                    index[0]['distance'],
+                                                    index['distance'],
                                                     textColor:
                                                         AppColors.shadowColor,
                                                   ))
@@ -121,7 +122,7 @@ class _DoctorInfoState extends State<DoctorInfo> {
                                                       const EdgeInsets.only(
                                                           left: 8.0),
                                                   child: TextView(
-                                                    index[0]['rating'],
+                                                    index['rating'],
                                                     textColor:
                                                         AppColors.shadowColor,
                                                   ))
@@ -190,7 +191,7 @@ class _DoctorInfoState extends State<DoctorInfo> {
             Padding(
               padding: const EdgeInsets.only(top: 12.0, left: 24, right: 24),
               child: TextView(
-                index[0]['about'],
+                index['about'],
                 textAlign: TextAlign.justify,
                 textColor: Colors.grey,
               ),
@@ -208,7 +209,7 @@ class _DoctorInfoState extends State<DoctorInfo> {
               child: Column(
                 children: [
                   TextView(
-                    index[0]['time'][0],
+                    index['time'][0],
                     textAlign: TextAlign.justify,
                     textColor: Colors.grey,
                   ),
@@ -217,7 +218,7 @@ class _DoctorInfoState extends State<DoctorInfo> {
                       top: 12.0,
                     ),
                     child: TextView(
-                      index[0]['time'][1],
+                      index['time'][1],
                       textAlign: TextAlign.justify,
                       textColor: Colors.grey,
                     ),
@@ -227,7 +228,7 @@ class _DoctorInfoState extends State<DoctorInfo> {
                     child: primaryButton(
                         155, 44, Theme.of(context).primaryColor.withOpacity(.8),
                         () {
-                      Get.to(BookAppointment());
+                      Get.to(BookAppointment(), arguments: index['name']);
                     }, 'Book Appointment', AppColors.lightTextColor, 22),
                   )
                 ],

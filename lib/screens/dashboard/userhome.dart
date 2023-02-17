@@ -25,6 +25,7 @@ class _UserHomeState extends State<UserHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       backgroundColor: AppColors.appBackground,
       body: SingleChildScrollView(
         physics: BouncingScrollPhysics(),
