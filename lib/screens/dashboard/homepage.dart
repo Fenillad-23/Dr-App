@@ -1,5 +1,6 @@
 import 'package:demo/screens/authentication/forgot%20password/resetPassword.dart';
-import 'package:demo/screens/authentication/signup.dart';
+
+import 'package:demo/screens/dashboard/services/packageList.dart';
 import 'package:demo/screens/dashboard/userhome.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int indexPage = 0;
-  List screens = <Widget>[UserHome(), SignUp(), ResetPassword()];
+  List screens = <Widget>[UserHome(), PackageList(), ResetPassword()];
   redirect(int i) {
     setState(() {
       indexPage = i;

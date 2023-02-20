@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:demo/color/AppColor.dart';
 import 'package:demo/controller/homepageController.dart';
 import 'package:demo/screens/dashboard/doctor/topdoctors.dart';
+import 'package:demo/screens/dashboard/services/notificationService.dart';
 import 'package:demo/widget/TextView.dart';
 import 'package:demo/widget/customTile.dart';
 import 'package:demo/widget/primaryButton.dart';
@@ -62,8 +63,10 @@ class _UserHomeState extends State<UserHome> {
                   ),
                   IconButton(
                     icon: Icon(Icons.notifications_outlined),
-                    onPressed: () {},
-                  )
+                    onPressed: () {
+                      Get.to(notification());
+                    },
+                  ),
                 ],
               ),
             ),

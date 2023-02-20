@@ -7,6 +7,7 @@ import 'package:get/get.dart';
 import '../../../widget/TextView.dart';
 import '../../../widget/appBar.dart';
 import '../../../widget/primaryButton.dart';
+import 'appointmentdetail.dart';
 
 class PatientDetail extends StatefulWidget {
   const PatientDetail({super.key});
@@ -119,7 +120,7 @@ class _PatientDetailState extends State<PatientDetail> {
             padding: const EdgeInsets.only(top: 64, left: 130),
             child: primaryButton(
                 155, 44, Theme.of(context).primaryColor.withOpacity(.8), () {
-              // Get.to();
+              Get.to(AppointmentDetails());
             }, 'Next', AppColors.lightTextColor, 22),
           )
         ]),
