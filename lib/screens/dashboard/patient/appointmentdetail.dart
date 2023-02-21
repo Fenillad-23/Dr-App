@@ -1,5 +1,5 @@
-import 'package:demo/controller/homepageController.dart';
-import 'package:demo/widget/AssetIcon.dart';
+import 'package:Dr.App/controller/homepageController.dart';
+import 'package:Dr.App/widget/AssetIcon.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

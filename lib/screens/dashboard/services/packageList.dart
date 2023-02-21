@@ -1,6 +1,6 @@
-import 'package:demo/color/AppColor.dart';
-import 'package:demo/screens/dashboard/services/chatService.dart';
-import 'package:demo/widget/TextView.dart';
+import 'package:Dr.App/color/AppColor.dart';
+import 'package:Dr.App/screens/dashboard/services/chatService.dart';
+import 'package:Dr.App/widget/TextView.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

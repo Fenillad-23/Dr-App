@@ -1,9 +1,9 @@
-import 'package:demo/screens/authentication/signin.dart';
-import 'package:demo/color/AppColor.dart';
-import 'package:demo/controller/signupController.dart';
-import 'package:demo/widget/EditText.dart';
-import 'package:demo/widget/TextView.dart';
-import 'package:demo/widget/primaryButton.dart';
+import 'package:Dr.App/screens/authentication/signin.dart';
+import 'package:Dr.App/color/AppColor.dart';
+import 'package:Dr.App/controller/signupController.dart';
+import 'package:Dr.App/widget/EditText.dart';
+import 'package:Dr.App/widget/TextView.dart';
+import 'package:Dr.App/widget/primaryButton.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../widget/appBar.dart';

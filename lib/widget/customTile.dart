@@ -1,4 +1,4 @@
-import 'package:demo/color/AppColor.dart';
+import 'package:Dr.App/color/AppColor.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

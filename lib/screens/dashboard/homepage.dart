@@ -1,7 +1,8 @@
-import 'package:demo/screens/authentication/forgot%20password/resetPassword.dart';
+import 'package:Dr.App/screens/dashboard/patient/profile.dart';
+import 'package:Dr.App/screens/dashboard/patient/scheduled.dart';
 
-import 'package:demo/screens/dashboard/services/packageList.dart';
-import 'package:demo/screens/dashboard/userhome.dart';
+import 'package:Dr.App/screens/dashboard/services/packageList.dart';
+import 'package:Dr.App/screens/dashboard/userhome.dart';
 import 'package:flutter/material.dart';
 
 import '../../color/AppColor.dart';
@@ -15,7 +16,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int indexPage = 0;
-  List screens = <Widget>[UserHome(), PackageList(), ResetPassword()];
+  List screens = <Widget>[UserHome(), PackageList(), Scheduled(), Profile()];
   redirect(int i) {
     setState(() {
       indexPage = i;

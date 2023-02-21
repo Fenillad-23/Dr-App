@@ -1,4 +1,4 @@
-import 'package:demo/widget/TextView.dart';
+import 'package:Dr.App/widget/TextView.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

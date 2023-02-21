@@ -1,5 +1,5 @@
-import 'package:demo/screens/authentication/signin.dart';
-import 'package:demo/controller/forgotPasswordController.dart';
+import 'package:Dr.App/screens/authentication/signin.dart';
+import 'package:Dr.App/controller/forgotPasswordController.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

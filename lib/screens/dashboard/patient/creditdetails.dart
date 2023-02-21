@@ -1,4 +1,4 @@
-import 'package:demo/color/AppColor.dart';
+import 'package:Dr.App/color/AppColor.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -7,7 +7,6 @@ import '../../../widget/EditText.dart';
 import '../../../widget/TextView.dart';
 import '../../../widget/appBar.dart';
 import '../../../widget/primaryButton.dart';
-import '../services/chatService.dart';
 
 class CreditCardDetails extends StatefulWidget {
   const CreditCardDetails({super.key});

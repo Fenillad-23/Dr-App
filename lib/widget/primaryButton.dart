@@ -16,6 +16,7 @@ Container primaryButton(double width, double height, Color? backgroundColor,
               end: Alignment.bottomCenter)),
       child: ElevatedButton(
           style: ElevatedButton.styleFrom(
+              animationDuration: Duration(milliseconds: 5000),
               backgroundColor: backgroundColor,
               side: BorderSide(color: outlineBorderColor ?? Colors.blue),
               shape: RoundedRectangleBorder(

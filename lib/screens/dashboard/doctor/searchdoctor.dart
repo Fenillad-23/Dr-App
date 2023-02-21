@@ -1,5 +1,5 @@
-import 'package:demo/widget/EditTextSearch.dart';
-import 'package:demo/widget/appBar.dart';
+import 'package:Dr.App/widget/EditTextSearch.dart';
+import 'package:Dr.App/widget/appBar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

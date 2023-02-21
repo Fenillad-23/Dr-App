@@ -1,7 +1,7 @@
-import 'package:demo/screens/authentication/forgot%20password/resetPassword.dart';
-import 'package:demo/controller/forgotPasswordController.dart';
-import 'package:demo/widget/TextView.dart';
-import 'package:demo/widget/primaryButton.dart';
+import 'package:Dr.App/screens/authentication/forgot%20password/resetPassword.dart';
+import 'package:Dr.App/controller/forgotPasswordController.dart';
+import 'package:Dr.App/widget/TextView.dart';
+import 'package:Dr.App/widget/primaryButton.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:otp_text_field/otp_field.dart';

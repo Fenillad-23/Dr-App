@@ -1,8 +1,7 @@
-import 'package:demo/color/AppColor.dart';
-import 'package:demo/controller/appointmentController.dart';
-import 'package:demo/widget/AssetIcon.dart';
-import 'package:demo/widget/TextView.dart';
-import 'package:demo/widget/primaryButton.dart';
+import 'package:Dr.App/color/AppColor.dart';
+import 'package:Dr.App/controller/appointmentController.dart';
+import 'package:Dr.App/widget/TextView.dart';
+import 'package:Dr.App/widget/primaryButton.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

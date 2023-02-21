@@ -1,7 +1,7 @@
-import 'package:demo/controller/homepageController.dart';
-import 'package:demo/screens/dashboard/doctor/bookappointment.dart';
-import 'package:demo/widget/appBar.dart';
-import 'package:demo/widget/primaryButton.dart';
+import 'package:Dr.App/controller/homepageController.dart';
+import 'package:Dr.App/screens/dashboard/doctor/bookappointment.dart';
+import 'package:Dr.App/widget/appBar.dart';
+import 'package:Dr.App/widget/primaryButton.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

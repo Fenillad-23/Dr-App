@@ -1,6 +1,6 @@
-import 'package:demo/color/AppColor.dart';
-import 'package:demo/controller/chatController.dart';
-import 'package:demo/screens/dashboard/services/videoCallService.dart';
+import 'package:Dr.App/color/AppColor.dart';
+import 'package:Dr.App/controller/chatController.dart';
+import 'package:Dr.App/screens/dashboard/services/videoCallService.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../widget/EditText.dart';

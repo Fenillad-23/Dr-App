@@ -1,10 +1,10 @@
-import 'package:demo/screens/authentication/forgot%20password/forgotpassword.dart';
-import 'package:demo/screens/authentication/signup.dart';
-import 'package:demo/color/AppColor.dart';
-import 'package:demo/controller/signinController.dart';
-import 'package:demo/widget/EditText.dart';
-import 'package:demo/widget/TextView.dart';
-import 'package:demo/widget/primaryButton.dart';
+import 'package:Dr.App/screens/authentication/forgot%20password/forgotpassword.dart';
+import 'package:Dr.App/screens/authentication/signup.dart';
+import 'package:Dr.App/color/AppColor.dart';
+import 'package:Dr.App/controller/signinController.dart';
+import 'package:Dr.App/widget/EditText.dart';
+import 'package:Dr.App/widget/TextView.dart';
+import 'package:Dr.App/widget/primaryButton.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../widget/appBar.dart';

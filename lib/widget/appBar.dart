@@ -4,7 +4,8 @@ import 'package:get/get.dart';
 import '../color/AppColor.dart';
 import 'TextView.dart';
 
-AppBar Appbar(String? title, [List<Widget>? actions]) {
+AppBar Appbar(String? title,
+    [List<Widget>? actions, PreferredSizeWidget? bottom]) {
   return AppBar(
     backgroundColor: AppColors.appBarColor,
     elevation: 0,
@@ -26,6 +27,7 @@ AppBar Appbar(String? title, [List<Widget>? actions]) {
       ),
     ),
     actions: actions,
+    bottom: bottom,
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.only(
         bottomLeft: Radius.circular(20),

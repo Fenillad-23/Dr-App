@@ -1,11 +1,11 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:demo/color/AppColor.dart';
-import 'package:demo/controller/homepageController.dart';
-import 'package:demo/screens/dashboard/doctor/topdoctors.dart';
-import 'package:demo/screens/dashboard/services/notificationService.dart';
-import 'package:demo/widget/TextView.dart';
-import 'package:demo/widget/customTile.dart';
-import 'package:demo/widget/primaryButton.dart';
+import 'package:Dr.App/color/AppColor.dart';
+import 'package:Dr.App/controller/homepageController.dart';
+import 'package:Dr.App/screens/dashboard/doctor/topdoctors.dart';
+import 'package:Dr.App/screens/dashboard/services/notificationService.dart';
+import 'package:Dr.App/widget/TextView.dart';
+import 'package:Dr.App/widget/customTile.dart';
+import 'package:Dr.App/widget/primaryButton.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

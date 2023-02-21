@@ -1,6 +1,6 @@
-import 'package:demo/color/AppColor.dart';
-import 'package:demo/controller/appointmentController.dart';
-import 'package:demo/widget/EditText.dart';
+import 'package:Dr.App/color/AppColor.dart';
+import 'package:Dr.App/controller/appointmentController.dart';
+import 'package:Dr.App/widget/EditText.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

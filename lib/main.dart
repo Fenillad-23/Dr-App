@@ -1,4 +1,4 @@
-import 'package:demo/splashscreen.dart';
+import 'package:Dr.App/splashscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      // title: 'Flutter Demo',
+      // title: 'Flutter Dr.App',
       theme: ThemeData(primarySwatch: Colors.blue, fontFamily: 'Noto Sans'),
       home: SplashScreen(),
     );
