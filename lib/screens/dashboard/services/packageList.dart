@@ -28,7 +28,9 @@ class _PackageListState extends State<PackageList> {
                   padding: const EdgeInsets.all(8.0),
                   child: ListTile(
                       onTap: () {
-                        Get.to(DoctorChat());
+                        Get.to(DoctorChat(),
+                            curve: Curves.bounceInOut,
+                            duration: Duration(milliseconds: 2500));
                       },
                       leading: CircleAvatar(
                           child: ClipRRect(

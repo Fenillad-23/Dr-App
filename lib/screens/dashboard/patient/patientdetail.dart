@@ -95,7 +95,9 @@ class _PatientDetailState extends State<PatientDetail> {
               padding: const EdgeInsets.only(top: 64, left: 130),
               child: primaryButton(
                   155, 44, Theme.of(context).primaryColor.withOpacity(.8), () {
-                Get.to(AppointmentDetails());
+                Get.to(AppointmentDetails(),
+                    curve: Curves.bounceInOut,
+                    duration: Duration(milliseconds: 2500));
               }, 'Next', AppColors.lightTextColor, 22))
         ])));
   }

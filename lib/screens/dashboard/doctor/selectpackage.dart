@@ -66,7 +66,9 @@ class _SelectPackageState extends State<SelectPackage> {
                   padding: const EdgeInsets.only(left: 130.0, top: 248),
                   child: primaryButton(155, 44, Theme.of(context).primaryColor,
                       () {
-                    Get.to(PatientDetail());
+                    Get.to(PatientDetail(),
+                        curve: Curves.bounceInOut,
+                        duration: Duration(milliseconds: 2500));
                   }, 'Next', AppColors.lightTextColor, 22))
             ]));
   }

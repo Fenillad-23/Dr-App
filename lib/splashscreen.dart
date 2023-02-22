@@ -16,7 +16,8 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(Duration(milliseconds: 3000), () {
-      Get.to(Intro());
+      Get.to(Intro(),
+          curve: Curves.bounceInOut, duration: Duration(milliseconds: 2500));
     });
   }
 

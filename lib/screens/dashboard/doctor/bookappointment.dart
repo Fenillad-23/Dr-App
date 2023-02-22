@@ -96,7 +96,9 @@ class _BookAppointmentState extends State<BookAppointment> {
                   child: primaryButton(
                       155, 44, Theme.of(context).primaryColor.withOpacity(.8),
                       () {
-                    Get.to(SelectPackage());
+                    Get.to(SelectPackage(),
+                        curve: Curves.bounceInOut,
+                        duration: Duration(milliseconds: 2500));
                   }, 'Next', AppColors.lightTextColor, 22))
             ])));
   }

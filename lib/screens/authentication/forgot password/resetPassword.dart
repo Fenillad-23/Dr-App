@@ -72,11 +72,15 @@ class _ResetPasswordState extends State<ResetPassword> {
               padding: const EdgeInsets.only(top: 260.0, left: 130, right: 129),
               child: primaryButton(
                   155, 44, Theme.of(context).primaryColor.withOpacity(.8), () {
-                Get.to(SignIn());
+                Get.to(SignIn(),
+                    curve: Curves.bounceInOut,
+                    duration: Duration(milliseconds: 2500));
               }, 'Submit', AppColors.lightTextColor, 22)),
           GestureDetector(
               onTap: () {
-                Get.to(SignIn());
+                Get.to(SignIn(),
+                    curve: Curves.bounceInOut,
+                    duration: Duration(milliseconds: 2500));
               },
               child: Padding(
                   padding: const EdgeInsets.only(top: 16.0),

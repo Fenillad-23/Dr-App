@@ -24,7 +24,9 @@ class _DoctorChatState extends State<DoctorChat> {
           Center(
               child: IconButton(
                   onPressed: (() {
-                    Get.to(VoiceCall());
+                    Get.to(VoiceCall(),
+                        curve: Curves.bounceInOut,
+                        duration: Duration(milliseconds: 2500));
                   }),
                   icon: Icon(Icons.call_outlined,
                       color: AppColors.darkTextColor))),
@@ -33,7 +35,9 @@ class _DoctorChatState extends State<DoctorChat> {
                   icon: Icon(Icons.video_call_outlined),
                   color: AppColors.darkTextColor,
                   onPressed: () {
-                    Get.to(VideoCall());
+                    Get.to(VideoCall(),
+                        curve: Curves.bounceInOut,
+                        duration: Duration(milliseconds: 2500));
                   }))
         ]),
         body: Container(

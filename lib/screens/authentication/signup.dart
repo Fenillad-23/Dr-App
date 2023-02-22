@@ -113,7 +113,9 @@ class _SignUpState extends State<SignUp> {
                   22)),
           GestureDetector(
               onTap: () {
-                Get.to(SignIn());
+                Get.to(SignIn(),
+                    curve: Curves.bounceInOut,
+                    duration: Duration(milliseconds: 2500));
               },
               child: Padding(
                   padding: const EdgeInsets.only(top: 16.0),

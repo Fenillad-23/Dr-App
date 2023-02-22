@@ -21,6 +21,11 @@ class SignIn extends StatefulWidget {
 class _SignInState extends State<SignIn> {
   signincontroller controller = Get.put(signincontroller());
   @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
         resizeToAvoidBottomInset: true,
@@ -73,7 +78,9 @@ class _SignInState extends State<SignIn> {
                           }))))),
           GestureDetector(
               onTap: () {
-                Get.to(ForgotPassword());
+                Get.to(ForgotPassword(),
+                    curve: Curves.bounceInOut,
+                    duration: Duration(milliseconds: 2500));
               },
               child: Padding(
                   padding: const EdgeInsets.only(right: 24.0, top: 12),
@@ -88,11 +95,15 @@ class _SignInState extends State<SignIn> {
               padding: const EdgeInsets.only(top: 240, left: 130, right: 129),
               child: primaryButton(
                   155, 44, Theme.of(context).primaryColor.withOpacity(.8), () {
-                Get.to(HomePage());
+                Get.to(HomePage(),
+                    curve: Curves.bounceInOut,
+                    duration: Duration(milliseconds: 2500));
               }, 'SignIn', AppColors.lightTextColor, 22)),
           GestureDetector(
               onTap: () {
-                Get.off(SignUp());
+                Get.off(SignUp(),
+                    curve: Curves.bounceInOut,
+                    duration: Duration(milliseconds: 2500));
               },
               child: Padding(
                   padding: const EdgeInsets.only(top: 16.0),

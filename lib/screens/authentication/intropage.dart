@@ -51,13 +51,17 @@ class _IntroState extends State<Intro> {
                           child: primaryButton(155, 44,
                               Theme.of(context).primaryColor.withOpacity(.8),
                               () {
-                            Get.to(SignIn());
+                            Get.to(SignIn(),
+                                curve: Curves.bounceInOut,
+                                duration: Duration(seconds: 3));
                           }, 'Login', AppColors.lightTextColor, 22)),
                       Padding(
                           padding: const EdgeInsets.only(top: 32.0),
                           child: primaryButton(
                               155, 44, AppColors.lightButtonColor, () {
-                            Get.to(SignUp());
+                            Get.to(SignUp(),
+                                curve: Curves.bounceInOut,
+                                duration: Duration(milliseconds: 2500));
                           }, 'Sign Up', AppColors.darkTextColor, 22,
                               AppColors.lightButtonBorder))
                     ]))));

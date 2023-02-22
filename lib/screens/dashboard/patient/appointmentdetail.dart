@@ -260,14 +260,16 @@ class _AppointmentDetailsState extends State<AppointmentDetails> {
                                 ])))
                         .toList(),
                     onChanged: ((value) {
-                      Get.to(CreditCardDetails());
+                      Get.to(CreditCardDetails(),
+                          curve: Curves.bounceInOut,
+                          duration: Duration(milliseconds: 2500));
                     }))
               ])),
           Padding(
               padding: const EdgeInsets.only(top: 48.0, left: 130, bottom: 27),
               child: primaryButton(
                   155, 44, Theme.of(context).primaryColor.withOpacity(.8), () {
-                Get.to(CreditCardDetails());
+                (CreditCardDetails());
               }, 'Book Now', AppColors.lightTextColor, 22))
         ])));
   }

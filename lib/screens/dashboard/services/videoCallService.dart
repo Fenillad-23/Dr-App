@@ -94,7 +94,9 @@ class _VideoCallState extends State<VideoCall> {
                         padding: const EdgeInsets.only(top: 40.0),
                         child: primaryButton(155, 44,
                             Theme.of(context).primaryColor.withOpacity(.8), () {
-                          Get.to(HomePage());
+                          Get.to(HomePage(),
+                              curve: Curves.bounceInOut,
+                              duration: Duration(milliseconds: 2500));
                         }, 'End Call', AppColors.lightTextColor, 22))
                   ]))
         ]));

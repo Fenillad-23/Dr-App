@@ -17,7 +17,10 @@ ListView DoctorListView(List doctorData, Widget elevatedButton, int itemCount) {
         padding: const EdgeInsets.only(top: 16.0, left: 20, right: 20),
         child: GestureDetector(
           onTap: () {
-            Get.to(DoctorInfo(), arguments: [doctorData[index]]);
+            Get.to(DoctorInfo(),
+                curve: Curves.bounceInOut,
+                duration: Duration(milliseconds: 2500),
+                arguments: [doctorData[index]]);
           },
           child: SizedBox(
             height: 98,

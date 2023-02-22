@@ -46,7 +46,9 @@ class _ProfileState extends State<Profile> {
                       const EdgeInsets.only(left: 24.0, right: 24.0, top: 28),
                   child: Column(children: [
                     GestureDetector(
-                        onTap: () => Get.to(EditProfile()),
+                        onTap: () => Get.to(EditProfile(),
+                            curve: Curves.bounceInOut,
+                            duration: Duration(milliseconds: 2500)),
                         child: card('assets/Icons/edit.png', 'Edit Profile')),
                     GestureDetector(
                         child: card('assets/Icons/save.png', 'Saved Doctors')),
