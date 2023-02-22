@@ -1,8 +1,6 @@
 import 'package:Dr.App/color/AppColor.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_navigation/src/routes/default_transitions.dart';
-
 import '../../widget/TextView.dart';
 import '../../widget/primaryButton.dart';
 import 'signin.dart';
