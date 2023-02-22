@@ -29,8 +29,9 @@ class _PackageListState extends State<PackageList> {
                   child: ListTile(
                       onTap: () {
                         Get.to(DoctorChat(),
-                            curve: Curves.bounceInOut,
-                            duration: Duration(milliseconds: 2500));
+                            curve: Curves.easeInCirc,
+                            transition: Transition.fadeIn,
+                            duration: Duration(milliseconds: 2000));
                       },
                       leading: CircleAvatar(
                           child: ClipRRect(

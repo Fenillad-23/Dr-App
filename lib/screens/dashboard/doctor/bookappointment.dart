@@ -97,8 +97,9 @@ class _BookAppointmentState extends State<BookAppointment> {
                       155, 44, Theme.of(context).primaryColor.withOpacity(.8),
                       () {
                     Get.to(SelectPackage(),
-                        curve: Curves.bounceInOut,
-                        duration: Duration(milliseconds: 2500));
+                        curve: Curves.easeInCirc,
+                        transition: Transition.fadeIn,
+                        duration: Duration(milliseconds: 2000));
                   }, 'Next', AppColors.lightTextColor, 22))
             ])));
   }

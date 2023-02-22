@@ -51,15 +51,17 @@ class _UserHomeState extends State<UserHome> {
                           ),
                           onPressed: () {
                             Get.to(SearchDoctor(),
-                                curve: Curves.bounceInOut,
-                                duration: Duration(milliseconds: 2500));
+                                transition: Transition.fadeIn,
+                                curve: Curves.easeInCirc,
+                                duration: Duration(milliseconds: 2000));
                           })),
                   IconButton(
                       icon: Icon(Icons.notifications_outlined),
                       onPressed: () {
                         Get.to(notification(),
-                            curve: Curves.bounceInOut,
-                            duration: Duration(milliseconds: 2500));
+                            transition: Transition.fadeIn,
+                            curve: Curves.easeInCirc,
+                            duration: Duration(milliseconds: 2000));
                       })
                 ])),
             Padding(
@@ -138,8 +140,9 @@ class _UserHomeState extends State<UserHome> {
                               child: GestureDetector(
                                   onTap: () {
                                     Get.to(() => TopDoctors(),
-                                        curve: Curves.bounceInOut,
-                                        duration: Duration(milliseconds: 2500));
+                                        transition: Transition.fadeIn,
+                                        curve: Curves.easeInCirc,
+                                        duration: Duration(milliseconds: 2000));
                                   },
                                   child: TextView('View All',
                                       textColor: AppColors.shadowColor,
@@ -152,8 +155,9 @@ class _UserHomeState extends State<UserHome> {
                     113, 28, Theme.of(context).primaryColor.withOpacity(.8),
                     () {
                   Get.to(BookAppointment(),
-                      curve: Curves.bounceInOut,
-                      duration: Duration(milliseconds: 2500));
+                      curve: Curves.easeInCirc,
+                      transition: Transition.fadeIn,
+                      duration: Duration(milliseconds: 2000));
                 }, 'Appointment', AppColors.lightTextColor, 25),
                 3),
             Padding(

@@ -67,8 +67,9 @@ class _SelectPackageState extends State<SelectPackage> {
                   child: primaryButton(155, 44, Theme.of(context).primaryColor,
                       () {
                     Get.to(PatientDetail(),
-                        curve: Curves.bounceInOut,
-                        duration: Duration(milliseconds: 2500));
+                        transition: Transition.fadeIn,
+                        curve: Curves.easeInCirc,
+                        duration: Duration(milliseconds: 2000));
                   }, 'Next', AppColors.lightTextColor, 22))
             ]));
   }

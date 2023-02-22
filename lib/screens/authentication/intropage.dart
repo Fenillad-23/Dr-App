@@ -1,6 +1,7 @@
 import 'package:Dr.App/color/AppColor.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get/get_navigation/src/routes/default_transitions.dart';
 
 import '../../widget/TextView.dart';
 import '../../widget/primaryButton.dart';
@@ -52,16 +53,18 @@ class _IntroState extends State<Intro> {
                               Theme.of(context).primaryColor.withOpacity(.8),
                               () {
                             Get.to(SignIn(),
-                                curve: Curves.bounceInOut,
-                                duration: Duration(seconds: 3));
+                                transition: Transition.fadeIn,
+                                curve: Curves.easeInOutCirc,
+                                duration: Duration(milliseconds: 2000));
                           }, 'Login', AppColors.lightTextColor, 22)),
                       Padding(
                           padding: const EdgeInsets.only(top: 32.0),
                           child: primaryButton(
                               155, 44, AppColors.lightButtonColor, () {
                             Get.to(SignUp(),
-                                curve: Curves.bounceInOut,
-                                duration: Duration(milliseconds: 2500));
+                                transition: Transition.fade,
+                                curve: Curves.easeInOutCirc,
+                                duration: Duration(milliseconds: 2000));
                           }, 'Sign Up', AppColors.darkTextColor, 22,
                               AppColors.lightButtonBorder))
                     ]))));

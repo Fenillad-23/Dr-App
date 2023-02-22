@@ -79,8 +79,9 @@ class _SignInState extends State<SignIn> {
           GestureDetector(
               onTap: () {
                 Get.to(ForgotPassword(),
-                    curve: Curves.bounceInOut,
-                    duration: Duration(milliseconds: 2500));
+                    transition: Transition.fadeIn,
+                    curve: Curves.easeInCirc,
+                    duration: Duration(milliseconds: 2000));
               },
               child: Padding(
                   padding: const EdgeInsets.only(right: 24.0, top: 12),
@@ -96,14 +97,15 @@ class _SignInState extends State<SignIn> {
               child: primaryButton(
                   155, 44, Theme.of(context).primaryColor.withOpacity(.8), () {
                 Get.to(HomePage(),
-                    curve: Curves.bounceInOut,
-                    duration: Duration(milliseconds: 2500));
+                    curve: Curves.easeInCirc,
+                    duration: Duration(milliseconds: 3000));
               }, 'SignIn', AppColors.lightTextColor, 22)),
           GestureDetector(
               onTap: () {
                 Get.off(SignUp(),
-                    curve: Curves.bounceInOut,
-                    duration: Duration(milliseconds: 2500));
+                    curve: Curves.easeInCirc,
+                    transition: Transition.fadeIn,
+                    duration: Duration(milliseconds: 2000));
               },
               child: Padding(
                   padding: const EdgeInsets.only(top: 16.0),

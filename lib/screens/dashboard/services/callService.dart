@@ -105,8 +105,9 @@ class _VideoCallState extends State<VoiceCall> {
                       child: primaryButton(155, 44,
                           Theme.of(context).primaryColor.withOpacity(.8), () {
                         Get.to(HomePage(),
-                            curve: Curves.bounceInOut,
-                            duration: Duration(milliseconds: 2500));
+                            curve: Curves.easeInCirc,
+                            transition: Transition.fadeIn,
+                            duration: Duration(milliseconds: 2000));
                       }, 'End Call', AppColors.lightTextColor, 22))
                 ]))
       ]),
