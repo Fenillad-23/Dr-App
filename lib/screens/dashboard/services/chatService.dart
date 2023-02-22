@@ -26,7 +26,7 @@ class _DoctorChatState extends State<DoctorChat> {
                   onPressed: (() {
                     Get.to(VoiceCall(),
                         curve: Curves.easeInCirc,
-                        transition: Transition.fadeIn,
+                        transition: Transition.fade,
                         duration: Duration(milliseconds: 2000));
                   }),
                   icon: Icon(Icons.call_outlined,
@@ -37,7 +37,7 @@ class _DoctorChatState extends State<DoctorChat> {
                   color: AppColors.darkTextColor,
                   onPressed: () {
                     Get.to(VideoCall(),
-                        transition: Transition.fadeIn,
+                        transition: Transition.fade,
                         curve: Curves.easeInCirc,
                         duration: Duration(milliseconds: 2000));
                   }))

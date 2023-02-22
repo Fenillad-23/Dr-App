@@ -79,7 +79,7 @@ class _SignInState extends State<SignIn> {
           GestureDetector(
               onTap: () {
                 Get.to(ForgotPassword(),
-                    transition: Transition.fadeIn,
+                    transition: Transition.fade,
                     curve: Curves.easeInCirc,
                     duration: Duration(milliseconds: 2000));
               },
@@ -104,7 +104,7 @@ class _SignInState extends State<SignIn> {
               onTap: () {
                 Get.off(SignUp(),
                     curve: Curves.easeInCirc,
-                    transition: Transition.fadeIn,
+                    transition: Transition.fade,
                     duration: Duration(milliseconds: 2000));
               },
               child: Padding(

@@ -30,7 +30,7 @@ class _PackageListState extends State<PackageList> {
                       onTap: () {
                         Get.to(DoctorChat(),
                             curve: Curves.easeInCirc,
-                            transition: Transition.fadeIn,
+                            transition: Transition.fade,
                             duration: Duration(milliseconds: 2000));
                       },
                       leading: CircleAvatar(

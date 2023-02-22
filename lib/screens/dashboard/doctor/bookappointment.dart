@@ -98,7 +98,7 @@ class _BookAppointmentState extends State<BookAppointment> {
                       () {
                     Get.to(SelectPackage(),
                         curve: Curves.easeInCirc,
-                        transition: Transition.fadeIn,
+                        transition: Transition.fade,
                         duration: Duration(milliseconds: 2000));
                   }, 'Next', AppColors.lightTextColor, 22))
             ])));

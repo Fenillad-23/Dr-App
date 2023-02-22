@@ -53,7 +53,7 @@ class _IntroState extends State<Intro> {
                               Theme.of(context).primaryColor.withOpacity(.8),
                               () {
                             Get.to(SignIn(),
-                                transition: Transition.fadeIn,
+                                transition: Transition.fade,
                                 curve: Curves.easeInOutCirc,
                                 duration: Duration(milliseconds: 2000));
                           }, 'Login', AppColors.lightTextColor, 22)),

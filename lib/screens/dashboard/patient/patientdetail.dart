@@ -97,7 +97,7 @@ class _PatientDetailState extends State<PatientDetail> {
                   155, 44, Theme.of(context).primaryColor.withOpacity(.8), () {
                 Get.to(AppointmentDetails(),
                     curve: Curves.easeInCirc,
-                    transition: Transition.fadeIn,
+                    transition: Transition.fade,
                     duration: Duration(milliseconds: 2000));
               }, 'Next', AppColors.lightTextColor, 22))
         ])));

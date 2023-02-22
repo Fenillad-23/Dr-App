@@ -51,7 +51,7 @@ class _UserHomeState extends State<UserHome> {
                           ),
                           onPressed: () {
                             Get.to(SearchDoctor(),
-                                transition: Transition.fadeIn,
+                                transition: Transition.fade,
                                 curve: Curves.easeInCirc,
                                 duration: Duration(milliseconds: 2000));
                           })),
@@ -59,7 +59,7 @@ class _UserHomeState extends State<UserHome> {
                       icon: Icon(Icons.notifications_outlined),
                       onPressed: () {
                         Get.to(notification(),
-                            transition: Transition.fadeIn,
+                            transition: Transition.fade,
                             curve: Curves.easeInCirc,
                             duration: Duration(milliseconds: 2000));
                       })
@@ -140,7 +140,7 @@ class _UserHomeState extends State<UserHome> {
                               child: GestureDetector(
                                   onTap: () {
                                     Get.to(() => TopDoctors(),
-                                        transition: Transition.fadeIn,
+                                        transition: Transition.fade,
                                         curve: Curves.easeInCirc,
                                         duration: Duration(milliseconds: 2000));
                                   },
@@ -156,7 +156,7 @@ class _UserHomeState extends State<UserHome> {
                     () {
                   Get.to(BookAppointment(),
                       curve: Curves.easeInCirc,
-                      transition: Transition.fadeIn,
+                      transition: Transition.fade,
                       duration: Duration(milliseconds: 2000));
                 }, 'Appointment', AppColors.lightTextColor, 25),
                 3),

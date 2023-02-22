@@ -48,7 +48,7 @@ class _ProfileState extends State<Profile> {
                     GestureDetector(
                         onTap: () => Get.to(EditProfile(),
                             curve: Curves.easeInCirc,
-                            transition: Transition.fadeIn,
+                            transition: Transition.fade,
                             duration: Duration(milliseconds: 2000)),
                         child: card('assets/Icons/edit.png', 'Edit Profile')),
                     GestureDetector(

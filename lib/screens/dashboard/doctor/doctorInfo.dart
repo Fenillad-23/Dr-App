@@ -200,7 +200,7 @@ class _DoctorInfoState extends State<DoctorInfo> {
                             Theme.of(context).primaryColor.withOpacity(.8), () {
                           Get.to(BookAppointment(),
                               curve: Curves.easeInCirc,
-                                 transition: Transition.fadeIn,
+                              transition: Transition.fade,
                               duration: Duration(milliseconds: 2000),
                               arguments: index['name']);
                         }, 'Book Appointment', AppColors.lightTextColor, 22))

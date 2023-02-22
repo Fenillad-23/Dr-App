@@ -114,7 +114,7 @@ class _SignUpState extends State<SignUp> {
           GestureDetector(
               onTap: () {
                 Get.to(SignIn(),
-                    transition: Transition.fadeIn,
+                    transition: Transition.fade,
                     curve: Curves.easeInCirc,
                     duration: Duration(milliseconds: 2000));
               },

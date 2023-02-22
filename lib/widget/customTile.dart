@@ -18,7 +18,7 @@ ListView DoctorListView(List doctorData, Widget elevatedButton, int itemCount) {
         child: GestureDetector(
           onTap: () {
             Get.to(DoctorInfo(),
-                transition: Transition.fadeIn,
+                transition: Transition.fade,
                 curve: Curves.easeInCirc,
                 duration: Duration(milliseconds: 2000),
                 arguments: [doctorData[index]]);

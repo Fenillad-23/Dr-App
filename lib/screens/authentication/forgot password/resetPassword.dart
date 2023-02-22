@@ -74,13 +74,13 @@ class _ResetPasswordState extends State<ResetPassword> {
                   155, 44, Theme.of(context).primaryColor.withOpacity(.8), () {
                 Get.to(SignIn(),
                     curve: Curves.easeInCirc,
-                    transition: Transition.fadeIn,
+                    transition: Transition.fade,
                     duration: Duration(milliseconds: 2000));
               }, 'Submit', AppColors.lightTextColor, 22)),
           GestureDetector(
               onTap: () {
                 Get.to(SignIn(),
-                    transition: Transition.fadeIn,
+                    transition: Transition.fade,
                     curve: Curves.easeInCirc,
                     duration: Duration(milliseconds: 2000));
               },

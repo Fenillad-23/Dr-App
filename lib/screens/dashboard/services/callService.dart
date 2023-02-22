@@ -106,7 +106,7 @@ class _VideoCallState extends State<VoiceCall> {
                           Theme.of(context).primaryColor.withOpacity(.8), () {
                         Get.to(HomePage(),
                             curve: Curves.easeInCirc,
-                            transition: Transition.fadeIn,
+                            transition: Transition.fade,
                             duration: Duration(milliseconds: 2000));
                       }, 'End Call', AppColors.lightTextColor, 22))
                 ]))

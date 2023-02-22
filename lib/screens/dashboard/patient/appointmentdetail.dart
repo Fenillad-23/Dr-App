@@ -261,7 +261,7 @@ class _AppointmentDetailsState extends State<AppointmentDetails> {
                         .toList(),
                     onChanged: ((value) {
                       Get.to(CreditCardDetails(),
-                          transition: Transition.fadeIn,
+                          transition: Transition.fade,
                           curve: Curves.easeInCirc,
                           duration: Duration(milliseconds: 2000));
                     }))
