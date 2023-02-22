@@ -19,27 +19,22 @@ class _TopDoctorsState extends State<TopDoctors> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.appBackground,
-      appBar: Appbar('Top Doctors'),
-      body: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
-        child: Column(
-          children: [
-            DoctorListView(
-              controller.doctorData,
-              primaryButton(
-                  113,
-                  28,
-                  Theme.of(context).primaryColor.withOpacity(.8),
-                  () {},
-                  'Appointment',
-                  AppColors.lightTextColor,
-                  22),
-              controller.doctorData.length,
-            )
-          ],
-        ),
-      ),
-    );
+        backgroundColor: AppColors.appBackground,
+        appBar: Appbar('Top Doctors'),
+        body: SingleChildScrollView(
+            physics: BouncingScrollPhysics(),
+            child: Column(children: [
+              DoctorListView(
+                  controller.doctorData,
+                  primaryButton(
+                      113,
+                      28,
+                      Theme.of(context).primaryColor.withOpacity(.8),
+                      () {},
+                      'Appointment',
+                      AppColors.lightTextColor,
+                      22),
+                  controller.doctorData.length)
+            ])));
   }
 }

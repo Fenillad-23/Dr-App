@@ -22,59 +22,50 @@ class _ForgotPasswordState extends State<ForgotPassword> {
     return Scaffold(
         resizeToAvoidBottomInset: true,
         backgroundColor: AppColors.appBackground,
-        appBar: Appbar(
-          'Forgot Password',
-        ),
+        appBar: Appbar('Forgot Password'),
         body: SingleChildScrollView(
-          child:
-              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Padding(
-                padding: const EdgeInsets.only(left: 24.0, top: 24),
-                child: TextView('Phone Number',
-                    fontWeight: FontWeight.w500,
-                    fontSize: 16,
-                    textColor: AppColors.deepdarkTextColor)),
-            Padding(
-                padding:
-                    const EdgeInsets.only(left: 24.0, top: 12, right: 24.0),
-                child: EditText(
+            child:
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Padding(
+              padding: const EdgeInsets.only(left: 24.0, top: 24),
+              child: TextView('Phone Number',
+                  fontWeight: FontWeight.w500,
+                  fontSize: 16,
+                  textColor: AppColors.deepdarkTextColor)),
+          Padding(
+              padding: const EdgeInsets.only(left: 24.0, top: 12, right: 24.0),
+              child: EditText(
                   controller: controller.forgotPassword,
                   hint: 'Enter your Phone number',
                   border: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.blue, width: 1.0)),
-                  borderRadius: 8,
-                )),
-            Padding(
+                  borderRadius: 8)),
+          Padding(
               padding: const EdgeInsets.only(top: 32.0),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [TextView('OR')],
-              ),
-            ),
-            Padding(
-                padding: const EdgeInsets.only(left: 24.0, top: 24),
-                child: TextView('Email',
-                    fontWeight: FontWeight.w500,
-                    fontSize: 16,
-                    textColor: AppColors.deepdarkTextColor)),
-            Padding(
-                padding:
-                    const EdgeInsets.only(left: 24.0, top: 22, right: 24.0),
-                child: EditText(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [TextView('OR')])),
+          Padding(
+              padding: const EdgeInsets.only(left: 24.0, top: 24),
+              child: TextView('Email',
+                  fontWeight: FontWeight.w500,
+                  fontSize: 16,
+                  textColor: AppColors.deepdarkTextColor)),
+          Padding(
+              padding: const EdgeInsets.only(left: 24.0, top: 22, right: 24.0),
+              child: EditText(
                   controller: controller.forgotPassword,
                   hint: 'Enter your Email Id',
                   border: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.blue, width: 1.0)),
-                  borderRadius: 8,
-                )),
-            Padding(
+                  borderRadius: 8)),
+          Padding(
               padding: const EdgeInsets.only(top: 203.0, left: 130),
               child: primaryButton(
                   155, 44, Theme.of(context).primaryColor.withOpacity(.8), () {
                 Get.to(OtpVerification());
-              }, 'Submit', AppColors.lightTextColor, 22),
-            ),
-            GestureDetector(
+              }, 'Submit', AppColors.lightTextColor, 22)),
+          GestureDetector(
               onTap: () {
                 Get.back();
               },
@@ -91,9 +82,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                             fontWeight: FontWeight.w500,
                             fontSize: 14,
                             textColor: AppColors.deepdarkTextColor)
-                      ])),
-            )
-          ]),
-        ));
+                      ])))
+        ])));
   }
 }

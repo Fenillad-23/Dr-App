@@ -23,35 +23,23 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        height: MediaQuery.of(context).size.height,
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 145, right: 145, top: 350),
-              child: Hero(
-                tag: 'logo',
-                child: Image.asset(
-                  'assets/images/blue_logo.png',
-                  width: 124,
-                  height: 124,
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 300.0, top: 16),
-              child: Text(
-                'DOCTORS',
-                style: TextStyle(
-                  letterSpacing: 16,
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-            )
-          ],
-        ),
-      ),
-    );
+        body: Container(
+            height: MediaQuery.of(context).size.height,
+            child: Column(children: [
+              Padding(
+                  padding:
+                      const EdgeInsets.only(left: 145, right: 145, top: 350),
+                  child: Hero(
+                      tag: 'logo',
+                      child: Image.asset('assets/images/blue_logo.png',
+                          width: 124, height: 124))),
+              Padding(
+                  padding: const EdgeInsets.only(bottom: 300.0, top: 16),
+                  child: Text('DOCTORS',
+                      style: TextStyle(
+                          letterSpacing: 16,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500)))
+            ])));
   }
 }

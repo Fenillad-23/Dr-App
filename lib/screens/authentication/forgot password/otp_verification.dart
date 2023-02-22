@@ -23,23 +23,16 @@ class _OtpVerificationState extends State<OtpVerification> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.appBackground,
-      appBar: Appbar(
-        'Forgot Password',
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
+        backgroundColor: AppColors.appBackground,
+        appBar: Appbar('Forgot Password'),
+        body: SingleChildScrollView(
+            child:
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Padding(
               padding: const EdgeInsets.only(left: 24, top: 24.0),
-              child: TextView(
-                'Enter OTP',
-                fontWeight: FontWeight.w500,
-                fontSize: 16,
-              ),
-            ),
-            Padding(
+              child: TextView('Enter OTP',
+                  fontWeight: FontWeight.w500, fontSize: 16)),
+          Padding(
               padding: const EdgeInsets.only(left: 59, top: 16, right: 75),
               child: OTPTextField(
                   // controller: controller.otpController,
@@ -52,25 +45,17 @@ class _OtpVerificationState extends State<OtpVerification> {
                   onChanged: (value) {},
                   onCompleted: (pin) {
                     controller.otp = pin.toString();
-                  }),
-            ),
-            Padding(
+                  })),
+          Padding(
               padding: const EdgeInsets.only(top: 48.0, right: 79, left: 79),
-              child: TextView(
-                'Check your phone or email Id to vew OTP',
-                fontSize: 14,
-              ),
-            ),
-            Padding(
+              child: TextView('Check your phone or email Id to vew OTP',
+                  fontSize: 14)),
+          Padding(
               padding: const EdgeInsets.only(top: 274.0, left: 130, right: 129),
               child: primaryButton(
                   155, 44, Theme.of(context).primaryColor.withOpacity(.8), () {
                 Get.to(ResetPassword());
-              }, 'Submit', AppColors.lightTextColor, 22),
-            )
-          ],
-        ),
-      ),
-    );
+              }, 'Submit', AppColors.lightTextColor, 22))
+        ])));
   }
 }
