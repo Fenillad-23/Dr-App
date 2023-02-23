@@ -92,8 +92,7 @@ class _VideoCallState extends State<VideoCall> {
                         ])),
                     Padding(
                         padding: const EdgeInsets.only(top: 40.0),
-                        child: primaryButton(155, 44,
-                            Theme.of(context).primaryColor.withOpacity(.8), () {
+                        child: primaryButton(155, 44, Colors.transparent, () {
                           Get.to(HomePage(),
                               curve: Curves.easeInCirc,
                               transition: Transition.fade,

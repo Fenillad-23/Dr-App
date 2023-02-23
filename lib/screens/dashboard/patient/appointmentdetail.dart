@@ -268,8 +268,7 @@ class _AppointmentDetailsState extends State<AppointmentDetails> {
               ])),
           Padding(
               padding: const EdgeInsets.only(top: 48.0, left: 130, bottom: 27),
-              child: primaryButton(
-                  155, 44, Theme.of(context).primaryColor.withOpacity(.8), () {
+              child: primaryButton(155, 44, Colors.transparent, () {
                 (CreditCardDetails());
               }, 'Book Now', AppColors.lightTextColor, 22))
         ])));

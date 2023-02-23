@@ -52,8 +52,7 @@ class _OtpVerificationState extends State<OtpVerification> {
                   fontSize: 14)),
           Padding(
               padding: const EdgeInsets.only(top: 274.0, left: 130, right: 129),
-              child: primaryButton(
-                  155, 44, Theme.of(context).primaryColor.withOpacity(.8), () {
+              child: primaryButton(155, 44, Colors.transparent, () {
                 Get.to(ResetPassword(),
                     transition: Transition.fade,
                     curve: Curves.easeInCirc,

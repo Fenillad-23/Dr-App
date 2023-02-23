@@ -98,14 +98,8 @@ class _SearchDoctorState extends State<SearchDoctor> {
                   padding: const EdgeInsets.only(top: 16.0),
                   child: DoctorListView(
                       controller.doctorData,
-                      primaryButton(
-                          113,
-                          28,
-                          Theme.of(context).primaryColor.withOpacity(.8),
-                          () {},
-                          'Appointment',
-                          AppColors.lightTextColor,
-                          25),
+                      primaryButton(113, 28, Colors.transparent, () {},
+                          'Appointment', AppColors.lightTextColor, 25),
                       controller.doctorData.length)),
               Padding(
                   padding: const EdgeInsets.only(top: 32.0),

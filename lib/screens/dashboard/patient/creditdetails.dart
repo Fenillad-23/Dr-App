@@ -90,8 +90,7 @@ class _CreditCardDetailsState extends State<CreditCardDetails> {
                   borderRadius: 8)),
           Padding(
               padding: const EdgeInsets.only(top: 140.0, left: 130, bottom: 27),
-              child: primaryButton(
-                  155, 44, Theme.of(context).primaryColor.withOpacity(.8), () {
+              child: primaryButton(155, 44, Colors.transparent, () {
                 // Get.to(DoctorChat());
               }, 'Next', AppColors.lightTextColor, 22))
         ])));

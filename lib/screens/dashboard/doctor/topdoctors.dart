@@ -26,14 +26,8 @@ class _TopDoctorsState extends State<TopDoctors> {
             child: Column(children: [
               DoctorListView(
                   controller.doctorData,
-                  primaryButton(
-                      113,
-                      28,
-                      Theme.of(context).primaryColor.withOpacity(.8),
-                      () {},
-                      'Appointment',
-                      AppColors.lightTextColor,
-                      22),
+                  primaryButton(113, 28, Colors.transparent, () {},
+                      'Appointment', AppColors.lightTextColor, 22),
                   controller.doctorData.length)
             ])));
   }

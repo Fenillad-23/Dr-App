@@ -70,8 +70,7 @@ class _ResetPasswordState extends State<ResetPassword> {
                   borderRadius: 8)),
           Padding(
               padding: const EdgeInsets.only(top: 260.0, left: 130, right: 129),
-              child: primaryButton(
-                  155, 44, Theme.of(context).primaryColor.withOpacity(.8), () {
+              child: primaryButton(155, 44, Colors.transparent, () {
                 Get.to(SignIn(),
                     curve: Curves.easeInCirc,
                     transition: Transition.fade,

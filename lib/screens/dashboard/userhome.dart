@@ -151,9 +151,7 @@ class _UserHomeState extends State<UserHome> {
                         ]))),
             DoctorListView(
                 controller.doctorData,
-                primaryButton(
-                    113, 28, Theme.of(context).primaryColor.withOpacity(.8),
-                    () {
+                primaryButton(113, 28, Colors.transparent, () {
                   Get.to(BookAppointment(),
                       curve: Curves.easeInCirc,
                       transition: Transition.fade,

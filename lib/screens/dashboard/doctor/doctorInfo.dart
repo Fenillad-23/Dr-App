@@ -196,8 +196,7 @@ class _DoctorInfoState extends State<DoctorInfo> {
                             textColor: Colors.grey)),
                     Padding(
                         padding: const EdgeInsets.only(top: 122, left: 110),
-                        child: primaryButton(155, 44,
-                            Theme.of(context).primaryColor.withOpacity(.8), () {
+                        child: primaryButton(155, 44, Colors.transparent, () {
                           Get.to(BookAppointment(),
                               curve: Curves.easeInCirc,
                               transition: Transition.fade,

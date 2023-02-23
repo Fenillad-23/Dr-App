@@ -61,8 +61,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                   borderRadius: 8)),
           Padding(
               padding: const EdgeInsets.only(top: 203.0, left: 130),
-              child: primaryButton(
-                  155, 44, Theme.of(context).primaryColor.withOpacity(.8), () {
+              child: primaryButton(155, 44, Colors.transparent, () {
                 Get.to(OtpVerification(),
                     transition: Transition.fade,
                     curve: Curves.easeInCirc,

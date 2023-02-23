@@ -103,14 +103,8 @@ class _SignUpState extends State<SignUp> {
               ])),
           Padding(
               padding: const EdgeInsets.only(top: 113, left: 130, right: 129),
-              child: primaryButton(
-                  155,
-                  44,
-                  Theme.of(context).primaryColor.withOpacity(.8),
-                  () {},
-                  'SignUp',
-                  AppColors.lightTextColor,
-                  22)),
+              child: primaryButton(155, 44, Colors.transparent, () {}, 'SignUp',
+                  AppColors.lightTextColor, 22)),
           GestureDetector(
               onTap: () {
                 Get.to(SignIn(),

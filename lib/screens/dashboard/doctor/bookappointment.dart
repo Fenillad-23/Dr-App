@@ -93,9 +93,7 @@ class _BookAppointmentState extends State<BookAppointment> {
                           }))),
               Padding(
                   padding: const EdgeInsets.only(top: 73, left: 130),
-                  child: primaryButton(
-                      155, 44, Theme.of(context).primaryColor.withOpacity(.8),
-                      () {
+                  child: primaryButton(155, 44, Colors.transparent, () {
                     Get.to(SelectPackage(),
                         curve: Curves.easeInCirc,
                         transition: Transition.fade,

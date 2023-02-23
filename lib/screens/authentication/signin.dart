@@ -94,8 +94,7 @@ class _SignInState extends State<SignIn> {
                   ]))),
           Padding(
               padding: const EdgeInsets.only(top: 240, left: 130, right: 129),
-              child: primaryButton(
-                  155, 44, Theme.of(context).primaryColor.withOpacity(.8), () {
+              child: primaryButton(155, 44, Colors.transparent, () {
                 Get.to(HomePage(),
                     curve: Curves.easeInCirc,
                     duration: Duration(milliseconds: 3000));

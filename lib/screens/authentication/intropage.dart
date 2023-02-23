@@ -47,9 +47,7 @@ class _IntroState extends State<Intro> {
                       Padding(
                           padding: const EdgeInsets.only(
                               top: 289, left: 130, right: 129),
-                          child: primaryButton(155, 44,
-                              Theme.of(context).primaryColor.withOpacity(.8),
-                              () {
+                          child: primaryButton(155, 44, Colors.transparent, () {
                             Get.to(SignIn(),
                                 transition: Transition.fade,
                                 curve: Curves.easeInOutCirc,
